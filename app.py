@@ -36,5 +36,10 @@ def get_recent_track():
     else:
         return jsonify({"error":"no recently played track found"}),404
     
+@app.route('/callback')
+def spotify_callback():
+    return "Spotify authentication successful!"
+
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=8080)
