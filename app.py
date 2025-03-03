@@ -22,6 +22,10 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
 
 app=Flask(__name__)
 
+@app.route('/')
+def home():
+    return "Hello, Spotify OAuth is running!"
+
 @app.route('/recent-track',methods=['GET'])
 def get_recent_track():
     recent_tracks = sp.current_user_recently_played(limit=1)
