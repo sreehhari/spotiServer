@@ -1,7 +1,7 @@
 import os
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
-from flask import flash,jsonify,request,redirect
+from flask import Flask,jsonify,request,redirect
 from flask_cors import CORS
 from dotenv import load_dotenv
 
